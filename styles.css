@@ -68,7 +68,7 @@ nav ul li span:hover::after{
     width: 20%; /* Adjust the width as needed */
     height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
   }
-  /* about */
+  /* about section */
 
 #about{
     padding: 80px;
@@ -130,7 +130,7 @@ nav ul li span:hover::after{
 }
 .tab-contents ul li span{
     color:#2565fa;
-    font-size: 14px;
+    font-size: 15px;
 }
 .tab-contents{
     display: none;
