@@ -1,45 +1,170 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
+html{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
+#main-nav{
+    background-color: transparent;
+}
+#navbarSupportedContent{
+    cursor: pointer;
+}
+section{
+    height: 100vh;
 }
 body{
-    background:rgb(23, 23, 23) ;
-    color: rgb(238, 238, 238);
+    background-color: rgb(23, 23, 23) !important;
+   
 }
 #header{
-    width: 100%;
-    height: 100vh;
     background-image: url(images/codingbackground.png);
-    background-size: 80%;
-    background-position: center;
+    color: rgb(238, 238, 238);
 }
-.container{
-    padding: 10px 10%;
+#home{
+    /* background-image: url(images/codingbackground.png) !important; 
+    background-color: rgb(23, 23, 23); */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+/* Background test */
+#binary-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    opacity: 0.3;
 }
-.logo{
-    width: 140px;
+
+.binary-digit {
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    animation: animate 2s linear infinite;
 }
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* TESTING SPAN */
+
+
+/*   
+.custom-col span {
+    position: relative;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+  
+.custom-col span::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #239ee0;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+}
+  
+.custom-col span:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.custom-col span:hover{
+    color: #e97333;
+} */
+
+.custom-col a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+  
+.custom-col a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+ }
+ .custom-col a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .custom-col a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #e99133;
+  }
+  
+  .custom-col a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  .custom-col a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .custom-col a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .custom-col a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+  
+  /* Presentational Styles */
+  
+  .custom-col a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    vertical-align: top;
+  }
+
+/* ---------------------- */
+
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 3px 15px;
 }
-nav ul li span{
-    color: #fff;
+nav ul li a{
+    color: rgb(238, 238, 238)!important;
     text-decoration: none;
-    font-size: 20px;
-    position: relative;
-    cursor: pointer;
+    font-size: 18px !important;
 }
-nav ul li span::after{
+nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
@@ -52,13 +177,9 @@ nav ul li span::after{
 nav ul li span:hover::after{
     width: 100%;
 }
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
+/* ---------------------- */
+.custom-col{
+    padding-top: 20%;
 }
 .side-image {
     border-radius: 15%;
@@ -68,7 +189,20 @@ nav ul li span:hover::after{
     width: 20%; /* Adjust the width as needed */
     height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
   }
-  /* about section */
+
+i{
+    color: white;
+}
+.navbar{
+    padding-top: 2% !important;
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+}
+
+
+
+/* About section TESTING */
+
 
 #about{
     padding: 80px;
@@ -130,7 +264,7 @@ nav ul li span:hover::after{
 }
 .tab-contents ul li span{
     color:#2565fa;
-    font-size: 15px;
+    font-size: 14px;
 }
 .tab-contents{
     display: none;
