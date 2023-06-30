@@ -6,21 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arnav Gupta</title>
-    <link rel="icon" type="image/x-icon" href="/images/favcon2.png">
+    <link rel="icon" type="image/x-icon" href="/images/favcon2.png?">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
+    
+
     <script src="js/controller.js"></script>
+    
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    
+    <script> AOS.init(); </script>
+
     <div id="header">
         <div class="prevent-select" id="binary-background"></div>
-        <nav id="main-nav" class="navbar navbar-expand-md fixed-top" data-bs-theme="dark">
+        <nav id="main-nav" class="navbar navbar-expand-md fixed-top custom-col" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand" onclick="scrollToSection('header')" style="cursor: pointer;">
-                    <img src="images/aglogo.png" alt="Logo" width="50px" class="d-inline-block align-text-top">
+                    <img src="images/aglogo.png" alt="Logo" width="40px" class="d-inline-block align-text-top">
                 </a>
 
                 <button class="navbar-toggler" type="button">
@@ -32,28 +45,74 @@
                 <div class="collapse navbar-collapse" id ="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class = "navbar-item">
-                            <a onclick="scrollToSection('header')" class="nav-link">Home</a>
+                            <!-- <a onclick="scrollToSection('header')" class="nav-link">Home</a> -->
+                            <a href="#home" class="nav-link">Home</a>
                         </li>
                         <li class = "navbar-item">
-                            <a onclick="scrollToSection('about')" class="nav-link">About</a>
+                            <a href="#about" class="nav-link">About</a>
                         </li>
                         <li class = "navbar-item">
-                            <a onclick="scrollToSection('header')" class="nav-link">Portfolio</a>
+                            <a href="" class="nav-link">Portfolio</a>
                         </li>
                         <li class = "navbar-item">
-                            <a href="#about" class="nav-link">Contact</a>
+                            <a href="#contact" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 <!-- Home Text Section -->
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-8 alert alert-danger" >
+        <div class="container custom-col" style="margin-left: 10%;">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fas fa-envelope-open-text"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <p class="fs-3 lead">High School Student</p>
+                  
+                    <h1 class="display-3">Hello, I'm <a id="style-2" data-replace="Arnav Gupta"><span>Arnav Gupta</span></a></h1>
+                    
+                    <div class="d-flex">
+                        <a href="#about" class="btn btn-outline-light mr-3 p-2">About Me</a>
+                        
+                        <a href="#" class="btn btn-outline-light p-2"><i class="fas fa-caret-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+     
+      <div class="col-5 alert alert-info">
+         <img src="images/arnavmainpic.jpg" alt="img"  class="img-fluid">
+      </div>
+    </div>
+  </div> -->
+
+
         <section id="home">
             
             <div class="container custom-col" style="margin-left: 10%;">
                 <div class="row">
                     <div class="col-lg-6">
-                        <ul class="list-inline">
+                        <ul class="list-inline" data-aos="fade-up" data-aos-duration="750">
                             <li class="list-inline-item">
                                 <a href="#"><i class="fas fa-envelope-open-text"></i></a>
                             </li>
@@ -70,11 +129,10 @@
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                             </li>
                         </ul>
-                        <p class="fs-3 lead">High School Student</p>
-                        <!-- <h1 class="display-3">Hello, I'm  <span>Arnav Gupta</span> </h1> -->
-                        <h1 class="display-3">Hello, I'm <a id="style-2" data-replace="Arnav Gupta"><span>Arnav Gupta</span></a></h1>
+                        <p class="fs-3 lead" data-aos="fade-up" data-aos-duration="1000">High School Student</p>
+                        <h1 class="display-3" data-aos="fade-up" data-aos-duration="1500">Hello, I'm <a id="style-2" data-replace="Arnav Gupta"><span>Arnav Gupta</span></a></h1>
                         
-                        <div class="d-flex">
+                        <div class="d-flex" data-aos="fade-up" data-aos-duration="2000">
                             <a href="#about" class="btn btn-outline-light mr-3 p-2">About Me</a>
                             
                             <a href="#" class="btn btn-outline-light p-2"><i class="fas fa-caret-right"></i></a>
@@ -82,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <img src="images/arnavmainpic.jpg" alt="img" class = "side-image">
+                <img data-aos="zoom-in-left" data-aos-duration="900" src="images/arnavmainpic.jpg" alt="img" class = "side-image">
         </section>
     </div>
 
@@ -91,58 +149,123 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1" data-aos="fade-down-right" data-aos-duration="1000">
                     <img src="images/arnavsuit.jpg">
                 </div>
-                <div class="about-col-2">
+                <div class="about-col-2" data-aos="zoom-in-up">
                     <h1 class = "sub-title">About Me</h1>
                     <p>
                     My Name is Arnav Gupta and I am a incoming Junior at Hunterdon Central Regional High School who is passionate about programming and technology. 
                     I believe that these fields have the power to transform the world and I'm excited to be a part of that change.
                     </p>
                     
+                    <div class="portfolio">
+                        <div class="tab-titles">
+                            <p class ="tab-links active-link" onclick="opentab('activities')">Extra-curricular Activities</p>
+                            <p class ="tab-links" onclick="opentab('volunteering')">Volunteering</p>
+                            <p class ="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class ="tab-links" onclick="opentab('skills')">Skills</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="activities" data-aos="fade-up" data-aos-duration="1500">
+                            <ul>
+                                <li><span><span class="tab-contents-role"> Founder and President</span> (Oct 2022 - Present)</span><br>Developer Code Club</li>
+                                <li><span><span class="tab-contents-role">Vice President</span> (Sep 2022 - Present)</span><br>Investment Club </li>
+                                <li><span><span class="tab-contents-role">Programming Captain </span>(Sep 2021 - Present)</span><br>Robotics Club Team 3637 </li>
+                                <li><span><span class="tab-contents-role">Recording Secretary</span> (Sep 2021 - Present)</span><br>National Speech & Debate Association</li>
+                                <li><span><span class="tab-contents-role">Active Member & Mentor</span> (Sep 2022 - Present)</span><br>Connect Club</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="volunteering">
+                            <ul>
+                                <li><span><span class="tab-contents-role">Volunteer and Mentor</span> (May 2020 - Aug 2022)</span><br>ENGin</li>
+                                <li><span><span class="tab-contents-role">Web Developer</span>  (May 2022 - Present)</span><br>FIRST Robotics</li>
+                                <li><span><span class="tab-contents-role">Academic Tutor</span>  (Sep 2022 - Present)</span><br>Hunterdon Central Regional High School </li>
+                                <li><span><span class="tab-contents-role">Mentor</span>  (Oct 2022 - Dec 2022)</span><br>FIRST LEGO League</li>
+                                <li><span><span class="tab-contents-role">Volunteer</span>  (Apr 2023 - Present)</span><br>Hunterdon Outreach Programs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id = "experience">
+                            <ul>
+                                <li><span><span class="tab-contents-role">Software Developer</span> (Apr 2022 - Oct 2022)</span><br>HS Wrestling Team</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id = "skills">
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>CSS</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>HTML</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>Java</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>Communication</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>Leadership</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>MySQL/SQL</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="tab-titles">
-                        <p class ="tab-links active-link" onclick="opentab('activities')">Extra-curricular Activities</p>
-                        <p class ="tab-links" onclick="opentab('volunteering')">Volunteering</p>
-                        <p class ="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class ="tab-links" onclick="opentab('skills')">Skills</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="activities">
-                        <ul>
-                            <li><span>Founder and President (Oct 2022 - Present)</span><br>Developer Code Club</li>
-                            <li><span>Vice President (Sep 2022 - Present)</span><br>Investment Club </li>
-                            <li><span>Programming Captain (Sep 2021 - Present)</span><br>Robotics Club Team 3637 </li>
-                            <li><span>Recording Secretary (Sep 2021 - Present)</span><br>National Speech & Debate Association</li>
-                            <li><span>Active Member & Mentor (Sep 2022 - Present)</span><br>Connect Club</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="volunteering">
-                        <ul>
-                            <li><span>Volunteer and Mentor (May 2020 - Aug 2022)</span><br>ENGin</li>
-                            <li><span>Web Developer  (May 2022 - Present)</span><br>FIRST Robotics</li>
-                            <li><span>Academic Tutor  (Sep 2022 - Present)</span><br>Hunterdon Central Regional High School </li>
-                            <li><span>Mentor  (Oct 2022 - Dec 2022)</span><br>FIRST LEGO League</li>
-                            <li><span>Volunteer  (Apr 2023 - Present)</span><br>Hunterdon Outreach Programs</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id = "experience">
-                        <ul>
-                            <li><span>Software Developer (Apr 2022 - Oct 2022)</span><br>HS Wrestling Team</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id = "skills">
-                        <span>CSS</span>
-                        <div class="progress" style="height: 5px; width: 25%; ;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-                        </div>
-                        <span>HTML</span>
-                        <div class="progress" style="height: 5px; width: 25%; ;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-                        </div>
-                        <span>Java</span>
-                        <div class="progress" style="height: 5px; width: 25%; ;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <span>Git/Github</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>JavaScript</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <span>C++</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <span>Google API</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <span>Visual Studio Code</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -150,6 +273,56 @@
         </div>
     </div>
 </section>
+
+
+
+<!-- Contact Section -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1 class="sub-title"> Contact Me</h1>
+                <p style="color: gray">arnavkg@gmail.com</p>
+                <p style="color: gray">908-801-0387</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="form-floating mb-3">
+                    <input type="name" class="form-control" id="floatingName" placeholder="Password">
+                    <label for="floatingName">Full Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-4">
+        <div class="service p-4 bg-base rounded">
+            <div class="iconbox">
+                    <i class="las la-feather"></i>
+            </div>
+            <h4>Branding</h4>
+            <p>I have done a lot of stuff</p>
+            <a href="#" class="link-custom"> Read More</a>
+        </div>
+    </div>  
+</div> -->
 
 
 <!-- Toast  -->

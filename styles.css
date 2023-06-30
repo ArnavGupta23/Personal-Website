@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+   
 }
 html::-webkit-scrollbar{
     display: none;
@@ -10,6 +11,34 @@ html::-webkit-scrollbar{
 #navbarSupportedContent{
     cursor: pointer;
 }
+.nav-link:hover{
+    color:#e99133 !important;
+
+}
+
+.nav-link.active {
+    color: #54b3d6 !important;
+}
+
+/* nav bar scroll support test */
+.navbar{
+    padding-top: 15px !important;
+    padding-right: 10% !important;
+    padding-left: 10% !important;
+    transition: color 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* .navbar.navlink.active {
+    color: aqua !important;
+} */
+  
+.scrolled{
+  background-color: rgba(23, 23, 23, 0.665) !important;  /*Set your desired background color */
+  transition: background-color 0.5s ease-in-out;
+
+}
+  
 section{
     height: 100vh;
 }
@@ -36,7 +65,7 @@ body{
     height: 100%;
     background-color: transparent;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.195;
 }
 
 .binary-digit {
@@ -63,37 +92,10 @@ body{
     }
 }
 
-/* TESTING SPAN */
-
-
-/*   
-.custom-col span {
-    position: relative;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-  
-.custom-col span::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      border-radius: 4px;
-      background-color: #239ee0;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-}
-  
-.custom-col span:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.custom-col span:hover{
-    color: #e97333;
-} */
+/* 
+ * TESTING SPAN 
+ * USING FOR NAV TOO
+ */
 
 .custom-col a {
     overflow: hidden;
@@ -103,7 +105,7 @@ body{
   
 .custom-col a::before,
   a::after {
-   content: '';
+    content: '';
     position: absolute;
     width: 100%;
     left: 0;
@@ -152,7 +154,7 @@ body{
     vertical-align: top;
   }
 
-/* ---------------------- */
+/* ------------NEED TO SEE THIS CODE---------- */
 
 nav ul li{
     display: inline-block;
@@ -164,7 +166,8 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px !important;
 }
-nav ul li a::after{
+
+/* nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
@@ -173,10 +176,12 @@ nav ul li a::after{
     left: 0;
     bottom: -6px;
     transition: 0.5s;
-}
+} 
 nav ul li span:hover::after{
     width: 100%;
 }
+*/
+
 /* ---------------------- */
 .custom-col{
     padding-top: 20%;
@@ -188,17 +193,13 @@ nav ul li span:hover::after{
     left: 63%; /* Adjust the left position as needed */
     width: 20%; /* Adjust the width as needed */
     height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
-  }
+    border: 4px solid rgb(210, 164, 105);
+
+}
 
 i{
     color: white;
 }
-.navbar{
-    padding-top: 2% !important;
-    padding-right: 10% !important;
-    padding-left: 10% !important;
-}
-
 
 
 /* About section TESTING */
@@ -219,6 +220,7 @@ i{
 .about-col-1 img{
     width: 85%;
     border-radius: 15px;
+    border: 2px solid rgb(210, 164, 105);
 }
 .about-col-2{
     flex-basis: 60%;
@@ -263,12 +265,42 @@ i{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color:#2565fa;
+    color:#558eff;
     font-size: 14px;
+}
+.tab-contents-role{
+    color: #e99133 !important;
+    font-weight: 700;
 }
 .tab-contents{
     display: none;
 }
 .tab-contents.active-tab{
     display: block;
+}
+.tab-contents.active-tab ul{
+    padding-inline-start: 0px;
+}
+
+.progress{
+    height: 5px !important; 
+    width: 90%;
+}
+
+
+/*_____________Contact Section__________________*/
+
+#contact{
+    padding-top: 10%;
+}
+
+.social-icons{
+    margin-top: 15px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
 }

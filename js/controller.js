@@ -22,13 +22,14 @@ function createBinaryDigitMouse(event) {
     }, 400);
 }
 
-function startBinaryBackground() {
+function startBinaryBackground(start) {
+    if(start){
     setInterval(createBinaryDigit, 20);
+    }
     //document.addEventListener('mousemove', createBinaryDigitMouse);
-
 }
 
-startBinaryBackground();
+startBinaryBackground(true);
 
 
 //use when wanting to scroll to different parts of page
@@ -63,3 +64,42 @@ function launchToast() {
 // Set a timeout of 1 minute (60000 milliseconds) to launch the toast
 setTimeout(launchToast, 60000);
 
+
+//navbar scroll support
+// Get the navbar element
+//var navbar = document.getElementById('main-nav');
+
+
+// Function to add the "scrolled" class to the navbar when scrolling down
+function addScrolledClass() {
+    var navbar = document.querySelector('.navbar');
+var nav = document.getElementById('main-nav');
+  if (window.scrollY > 5) {
+    nav.classList.add('scrolled');
+
+  } else {
+   navbar.classList.remove('scrolled')
+  }
+}
+
+function addScrolledClass2() {
+    navbar.classList.add('scrolled');
+}
+
+// Add the event listener for the scroll event
+window.addEventListener('scroll', addScrolledClass);
+
+
+
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('nav .container ul li');
+
+window.addEventListener('scroll', ()=>{
+    let current = '';
+
+    sections.forEach(section =>{
+        const sectionTop = section.offsetTop;
+        console.log("hh3llo");
+        console.log(sectionTop);
+    })
+})
