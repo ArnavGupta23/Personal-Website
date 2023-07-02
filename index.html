@@ -61,7 +61,7 @@
                 </div>
             </div>
         </nav>
-<!-- Home Text Section -->
+<!-- Home Text Section TEST-->
 
 <!-- <div class="container">
     <div class="row">
@@ -106,8 +106,9 @@
     </div>
   </div> -->
 
+<!-- Home Text Section -->
 
-        <section id="home">
+        <section id="home" style="height: 100vh;">
             
             <div class="container custom-col" style="margin-left: 10%;">
                 <div class="row">
@@ -155,8 +156,15 @@
                 <div class="about-col-2" data-aos="zoom-in-up">
                     <h1 class = "sub-title">About Me</h1>
                     <p>
-                    My Name is Arnav Gupta and I am a incoming Junior at Hunterdon Central Regional High School who is passionate about programming and technology. 
+                    My Name is Arnav Gupta and I am an incoming Junior at Hunterdon Central Regional High School who is passionate about programming and technology. 
                     I believe that these fields have the power to transform the world and I'm excited to be a part of that change.
+                    </p>
+                    <p>
+                    In school, I strive to excel in subjects like mathematics, science, and computer science, as they provide a strong foundation for my programming journey. 
+                    One of my favorite aspects of programming is the ability to collaborate with like-minded individuals.
+                    </p>
+                    <p>
+                    In my free time, I love to engage with my friends and family. I also play basketball and golf daily, and I always try to improve my game. Lastly, I love to self improve by working out.
                     </p>
                     
                     <div class="portfolio">
@@ -278,8 +286,7 @@
 
 <!-- Contact Section -->
 
-<div id="contact">
-    <div class="container">
+    <div  id="contact" class="container">
         <div class="row">
             <div class="col-4">
                 <h1 class="sub-title"> Contact Me</h1>
@@ -293,23 +300,49 @@
                 </div>
             </div>
             <div class="col-7">
-                <div class="form-floating mb-3">
-                    <input type="name" class="form-control" id="floatingName" placeholder="Password">
-                    <label for="floatingName">Full Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Comments</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <form name="submit-to-google-sheet" autocomplete="on">
+                    <div class="form-floating mb-3">
+                        <input type="name" class="form-control" id="floatingName" placeholder="John Doe" name="Name">
+                        <label for="floatingName">Full Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="Email">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="Message"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
+
+
+<div class="copyright">
+    <p>Copyright © Arnav Gupta. Made by a High School Student</p>
 </div>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxHCkxqf3q4soUO1pZOWXFj--E9Z29NJV9x_Nxc03GR9da5kVzVmBvYJi2S8x6z5cKbhQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(() => {
+                msg.innerHTML = ""
+            }, 9000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 <!-- <div class="row">
     <div class="col-md-4">

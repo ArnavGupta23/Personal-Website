@@ -39,9 +39,9 @@ html::-webkit-scrollbar{
 
 }
   
-section{
+/* section{
     height: 100vh;
-}
+} */
 body{
     background-color: rgb(23, 23, 23) !important;
    
@@ -291,7 +291,8 @@ i{
 /*_____________Contact Section__________________*/
 
 #contact{
-    padding-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 
 .social-icons{
@@ -303,4 +304,18 @@ i{
     margin-right: 15px;
     color: #ababab;
     display: inline-block;
+}
+#msg{
+    color: #61b752;
+    display: block;
+    margin-top: 10px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    color:rgb(238, 238, 238);
 }
