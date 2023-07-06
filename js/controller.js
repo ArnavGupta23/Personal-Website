@@ -41,6 +41,7 @@ function scrollToSection(sectionId) {
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
+//using for portfolio
 function opentab(tabname){
     for(tablink of tablinks){
         tablink.classList.remove("active-link");
@@ -50,6 +51,9 @@ function opentab(tabname){
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
+    if(tabname == "skills"){
+        animateSkills();
+    }
 }
 
 // Function to launch the toast
@@ -73,17 +77,13 @@ setTimeout(launchToast, 60000);
 // Function to add the "scrolled" class to the navbar when scrolling down
 function addScrolledClass() {
     var navbar = document.querySelector('.navbar');
-var nav = document.getElementById('main-nav');
-  if (window.scrollY > 5) {
-    nav.classList.add('scrolled');
+    var nav = document.getElementById('main-nav');
+    if (window.scrollY > 5) {
+        nav.classList.add('scrolled');
 
-  } else {
-   navbar.classList.remove('scrolled')
-  }
-}
-
-function addScrolledClass2() {
-    navbar.classList.add('scrolled');
+    } else {
+    navbar.classList.remove('scrolled')
+    }
 }
 
 // Add the event listener for the scroll event
@@ -91,15 +91,86 @@ window.addEventListener('scroll', addScrolledClass);
 
 
 
-const sections = document.querySelectorAll('section');
-const navLi = document.querySelectorAll('nav .container ul li');
+// const sections = document.querySelectorAll('section');
+// const navLi = document.querySelectorAll('nav .container ul li');
 
-window.addEventListener('scroll', ()=>{
-    let current = '';
+// window.addEventListener('scroll', ()=>{
+//     let current = '';
 
-    sections.forEach(section =>{
-        const sectionTop = section.offsetTop;
-        console.log("hh3llo");
-        console.log(sectionTop);
-    })
-})
+//     sections.forEach(section =>{
+//         const sectionTop = section.offsetTop;
+//         console.log("hh3llo");
+//         console.log(sectionTop);
+//     })
+// })
+
+
+function animateSkills(){
+    // Set the width to animate the progress bar
+    // Along with time duration in milliseconds
+     $("#css").animate({
+        width: "60%",
+    }, 900);
+    $("#html").animate({
+        width: "60%",
+    }, 900);
+    $("#java").animate({
+        width: "80%",
+    }, 900);
+    $("#communication").animate({
+        width: "70%",
+    }, 900);
+    $("#leadership").animate({
+        width: "80%",
+    }, 900);
+    $("#sql").animate({
+        width: "55%",
+    }, 900);
+    $("#git").animate({
+        width: "85%",
+    }, 900);
+    $("#js").animate({
+        width: "55%",
+    }, 900);
+    $("#cpp").animate({
+        width: "75%",
+    }, 900);
+    $("#googleapi").animate({
+        width: "45%",
+    }, 900);
+    $("#vscode").animate({
+        width: "65%",
+    }, 900);
+}
+function setProgressZero(){
+    $(".progress-bar").width("0%")
+}
+
+function showSpinner(){
+    document.getElementById("spinner").style.display = "block";
+}
+function hideSpinner(){
+    document.getElementById("spinner").style.display = "none";
+}
+
+
+
+/* used for canceling spinner after 5 seconds
+
+document.addEventListener('DOMContentLoaded', function() {
+    var myDiv = document.querySelector('.spinner-border');
+    const msg = document.getElementById("msg")
+
+    // Show the div
+    //myDiv.style.display = 'block';
+
+    // Set a timer to check if the div is showing for more than 5 seconds
+    var timer = setTimeout(function() {
+      if (myDiv.style.display === 'block') {
+        msg.innerHTML = "Problem has occurred";
+        console.log('The div has been showing for more than 5 seconds.');
+        hideSpinner();
+      }
+    }, 5000);
+});
+*/

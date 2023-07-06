@@ -287,11 +287,28 @@ i{
     width: 90%;
 }
 
+/* _________Portfoltio_________ */
 
+#portfolio{
+    padding: 30px;
+    color: #e3e3e3;
+    height: 500px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.center {
+    margin: auto;
+    width: 40%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+}
 /*_____________Contact Section__________________*/
 
 #contact{
-    padding-top: 5%;
+    padding-top: 7%;
     padding-bottom: 3%;
 }
 
@@ -305,8 +322,11 @@ i{
     color: #ababab;
     display: inline-block;
 }
+.social-icons a:hover{
+    opacity: 60%;
+}
 #msg{
-    color: #61b752;
+    color: #569e49;
     display: block;
     margin-top: 10px;
 }
@@ -315,7 +335,7 @@ i{
     text-align: center;
     padding: 25px 0;
     background: #262626;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 20px;
     color:rgb(238, 238, 238);
 }
