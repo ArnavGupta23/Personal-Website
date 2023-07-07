@@ -1,5 +1,7 @@
 // You can also pass an optional settings object
 // below listed default settings
+/*AOS.init();
+
 AOS.init({
   // Global settings:
 //   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -21,6 +23,4 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
-});
-
-AOS.init();
+});*/
