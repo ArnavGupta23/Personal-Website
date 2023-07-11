@@ -1,3 +1,4 @@
+//used to create the 0 and 1 background
 function createBinaryDigit() {
     const digit = document.createElement('span');
     digit.className = 'binary-digit';
@@ -9,6 +10,10 @@ function createBinaryDigit() {
         digit.remove();
     }, 20000);
 }
+/* 
+ * for creating a mouse effect
+ * not being used
+ */
 function createBinaryDigitMouse(event) {
     const digit = document.createElement('span');
     digit.style.color = "#54b3d6"
@@ -24,7 +29,7 @@ function createBinaryDigitMouse(event) {
 
 function startBinaryBackground(start) {
     if(start){
-    setInterval(createBinaryDigit, 20);
+    setInterval(createBinaryDigit, 10);
     }
     //document.addEventListener('mousemove', createBinaryDigitMouse);
 }
@@ -38,10 +43,11 @@ function scrollToSection(sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
+
+//using for portfolio
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-//using for portfolio
 function opentab(tabname){
     for(tablink of tablinks){
         tablink.classList.remove("active-link");
@@ -69,12 +75,8 @@ function launchToast() {
 setTimeout(launchToast, 60000);
 
 
-//navbar scroll support
-// Get the navbar element
-//var navbar = document.getElementById('main-nav');
-
-
 // Function to add the "scrolled" class to the navbar when scrolling down
+//needed opacity changes when scrolling
 function addScrolledClass() {
     var navbar = document.querySelector('.navbar');
     var nav = document.getElementById('main-nav');
@@ -90,21 +92,7 @@ function addScrolledClass() {
 window.addEventListener('scroll', addScrolledClass);
 
 
-
-// const sections = document.querySelectorAll('section');
-// const navLi = document.querySelectorAll('nav .container ul li');
-
-// window.addEventListener('scroll', ()=>{
-//     let current = '';
-
-//     sections.forEach(section =>{
-//         const sectionTop = section.offsetTop;
-//         console.log("hh3llo");
-//         console.log(sectionTop);
-//     })
-// })
-
-
+//animte the progress bars for skills 
 function animateSkills(){
     // Set the width to animate the progress bar
     // Along with time duration in milliseconds
