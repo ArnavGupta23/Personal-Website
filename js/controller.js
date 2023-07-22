@@ -1,5 +1,4 @@
-//used to create the 0 and 1 background
-function createBinaryDigit() {
+function createBinaryDigitOLD() {
     const digit = document.createElement('span');
     digit.className = 'binary-digit';
     digit.textContent = Math.round(Math.random());
@@ -10,6 +9,21 @@ function createBinaryDigit() {
         digit.remove();
     }, 20000);
 }
+
+//used to create the 0 and 1 background
+//more efficient version
+function createBinaryDigit() {
+    const digit = document.createElement('span');
+    digit.className = 'binary-digit';
+    digit.textContent = Math.random() < 0.5 ? '0' : '1';
+    digit.style.left = `${Math.random() * 100}%`;
+    digit.style.top = `${Math.random() * 98}%`;
+    document.getElementById('binary-background').appendChild(digit);
+    setTimeout(() => {
+        digit.remove();
+    }, 20000);
+}
+
 /* 
  * for creating a mouse effect
  * not being used
