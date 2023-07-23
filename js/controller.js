@@ -138,7 +138,7 @@ function animateSkills(){
         width: "75%",
     }, 900);
     $("#googleapi").animate({
-        width: "45%",
+        width: "35%",
     }, 900);
     $("#vscode").animate({
         width: "65%",
@@ -149,7 +149,9 @@ function setProgressZero(){
 }
 
 function showSpinner(){
+    msg.innerHTML = "";
     document.getElementById("spinner").style.display = "block";
+    spinnerChecker();
 }
 function hideSpinner(){
     document.getElementById("spinner").style.display = "none";
@@ -157,22 +159,17 @@ function hideSpinner(){
 
 
 
-/* used for canceling spinner after 5 seconds
-
-document.addEventListener('DOMContentLoaded', function() {
+// used for canceling spinner after 5 seconds
+function spinnerChecker(){
     var myDiv = document.querySelector('.spinner-border');
     const msg = document.getElementById("msg")
-
-    // Show the div
-    //myDiv.style.display = 'block';
-
-    // Set a timer to check if the div is showing for more than 5 seconds
+    //console.log("inside the function");
     var timer = setTimeout(function() {
-      if (myDiv.style.display === 'block') {
-        msg.innerHTML = "Problem has occurred";
-        console.log('The div has been showing for more than 5 seconds.');
-        hideSpinner();
-      }
-    }, 5000);
-});
-*/
+        if (myDiv.style.display === 'block') {
+          msg.style.color = "#bf1d17";
+          msg.innerHTML = "Problem has occurred";
+          //console.log('more than 5 seconds');
+          hideSpinner();
+        }
+      }, 5000);
+}
