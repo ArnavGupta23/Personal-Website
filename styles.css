@@ -1,3 +1,8 @@
+/* html, body {
+    width: auto!important;
+     overflow-x: hidden!important
+}  */
+
 html{
     scroll-behavior: smooth;
     /* width: 100%; */
@@ -44,6 +49,7 @@ html::-webkit-scrollbar{
 } */
 body{
     background-color: rgb(23, 23, 23) !important;
+    /* overflow-x: hidden; */
    
 }
 #header{
@@ -307,7 +313,7 @@ i{
 /*_____________Contact Section__________________*/
 
 #contact{
-    padding-top: 15%;
+    padding-top: 10%;
     padding-bottom: 3%;
 }
 
@@ -355,21 +361,33 @@ i{
     }
     .side-image{
         position:absolute;
-        top: 325px;
+        top: 300px;
         left:0;
         right:0;
         bottom:0;
         margin:auto;
-        width: 250px; /* Adjust the width as needed */
+        width: 40%; /* Adjust the width as needed */
         height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
 
 
     }
     #home-header{
-        padding-top: 90px;
+        
+        padding-top: 40px;
+        text-align: center;
+    }
+    #home-part{
+        margin-left: 0% !important;
     }
     #contact{
-        padding-top: 60%;
+        padding-top: 140%;
+    }
+    #contact-info{
+        text-align: center !important;
+    }
+
+    .social-icons{
+        padding-bottom: 5%;
     }
     /*
     #header{
@@ -410,8 +428,11 @@ i{
         cursor: pointer;
     } */
     .sub-title{
-        font-size: 40px;
+        font-size: 30px;
     }
+    /* #contact-email, #contact-location{
+        font-size: 15px;
+    } */
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }

@@ -1,13 +1,17 @@
+
 function SmallScreen(){
     if(window.innerWidth < 700){
         //console.log('Small Screen');
+       $('#header-aboutbtn').addClass('justify-content-center');
         startBinaryBackground(false);
     }
     else{
-    startBinaryBackground(true);
+    $('#header-aboutbtn').removeClass('justify-content-center');
+    //change to true
+    startBinaryBackground(false);
     }
 }
-SmallScreen();
+
 
 window.addEventListener('resize', SmallScreen);
 
