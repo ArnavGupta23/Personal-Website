@@ -63,6 +63,10 @@ body{
     background-size: cover;
 }
 
+#element {
+    display: inline-block;
+}
+
 /* Background test */
 #binary-background {
     top: 0;
