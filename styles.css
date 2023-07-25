@@ -307,7 +307,7 @@ i{
 /*_____________Contact Section__________________*/
 
 #contact{
-    padding-top: 7%;
+    padding-top: 15%;
     padding-bottom: 3%;
 }
 
@@ -355,15 +355,21 @@ i{
     }
     .side-image{
         position:absolute;
-        top:250px;
+        top: 325px;
         left:0;
         right:0;
         bottom:0;
         margin:auto;
-        width: 200px; /* Adjust the width as needed */
+        width: 250px; /* Adjust the width as needed */
         height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
 
 
+    }
+    #home-header{
+        padding-top: 90px;
+    }
+    #contact{
+        padding-top: 60%;
     }
     /*
     #header{
@@ -419,7 +425,6 @@ i{
         font-size: 16px;
         margin-right: 20px;
     }
-
     .copyright{
         font-size: 14px;
     }

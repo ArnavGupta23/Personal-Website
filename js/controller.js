@@ -1,3 +1,16 @@
+function SmallScreen(){
+    if(window.innerWidth < 700){
+        //console.log('Small Screen');
+        startBinaryBackground(false);
+    }
+    else{
+    startBinaryBackground(true);
+    }
+}
+SmallScreen();
+
+window.addEventListener('resize', SmallScreen);
+
 function createBinaryDigitOLD() {
     const digit = document.createElement('span');
     digit.className = 'binary-digit';
@@ -21,24 +34,7 @@ function createBinaryDigit() {
     document.getElementById('binary-background').appendChild(digit);
     setTimeout(() => {
         digit.remove();
-    }, 20000);
-}
-
-/* 
- * for creating a mouse effect
- * not being used
- */
-function createBinaryDigitMouse(event) {
-    const digit = document.createElement('span');
-    digit.style.color = "#54b3d6"
-    digit.className = 'binary-digit';
-    digit.textContent = Math.round(Math.random());
-    digit.style.left = event.clientX + 'px';
-    digit.style.top = event.clientY + 'px';
-    document.getElementById('binary-background').appendChild(digit);
-    setTimeout(() => {
-        digit.remove();
-    }, 400);
+    }, 10000);
 }
 
 function startBinaryBackground(start) {
@@ -47,8 +43,6 @@ function startBinaryBackground(start) {
     }
     //document.addEventListener('mousemove', createBinaryDigitMouse);
 }
-
-startBinaryBackground(true);
 
 
 //use when wanting to scroll to different parts of page
