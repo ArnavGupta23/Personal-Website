@@ -7,8 +7,7 @@ function SmallScreen(){
     }
     else{
     $('#header-aboutbtn').removeClass('justify-content-center');
-    //change to true
-    startBinaryBackground(false);
+    startBinaryBackground(true);
     }
 }
 
@@ -43,7 +42,7 @@ function createBinaryDigit() {
 
 function startBinaryBackground(start) {
     if(start){
-    setInterval(createBinaryDigit, 10);
+    setInterval(createBinaryDigit, 17);
     }
     //document.addEventListener('mousemove', createBinaryDigitMouse);
 }
