@@ -1,4 +1,4 @@
-
+//using if the screen gets smaller
 function SmallScreen(){
     if(window.innerWidth < 700){
         //console.log('Small Screen');
