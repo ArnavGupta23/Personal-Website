@@ -356,11 +356,8 @@ i{
         position: absolute;
         text-align: center; 
         vertical-align: middle;
-        
-        /* top: 49%; 
-        left: 23%; */
-        width: 160px; /* Adjust the width as needed */
-        height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
+        width: 160px;
+        height: auto; 
         border: 4px solid rgb(210, 164, 105);
     }
     .side-image{
@@ -370,14 +367,18 @@ i{
         right:0;
         bottom:0;
         margin:auto;
-        width: 40%; /* Adjust the width as needed */
-        height: auto; /* Adjust the height as needed or remove to maintain aspect ratio */
-
-
+        width: 40%; 
+        height: auto;
     }
     #home-header{
-        
+
         padding-top: 40px;
+        text-align: center;
+    }
+    #portfolio-span{
+        text-align: center;
+    }
+    #portfolio{
         text-align: center;
     }
     #home-part{
@@ -393,50 +394,10 @@ i{
     .social-icons{
         padding-bottom: 5%;
     }
-    /*
-    #header{
-        background-image: url(images/phone-background.png);
-    }
-    
-    
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fas{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    } */
     .sub-title{
+        text-align: center;
         font-size: 30px;
     }
-    /* #contact-email, #contact-location{
-        font-size: 15px;
-    } */
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
@@ -444,6 +405,7 @@ i{
         margin-bottom: 30px;
     }
     .about-col-2{
+        text-align: center;
         font-size: 14px;
     }
     .tab-links{
@@ -453,4 +415,18 @@ i{
     .copyright{
         font-size: 14px;
     }
+    /* #submitBtn-div{
+        text-align: center;
+    }
+   #spinner{
+        text-align: center;
+    }
+    #msg{
+        text-align: center;
+    }  */
+    #contact{
+        text-align: center;
+    }
+    
+   
 }
