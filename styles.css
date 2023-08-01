@@ -362,18 +362,20 @@ i{
     } */
     .side-image{
         position:absolute;
-        top: 300px;
+        top: 250px;
         left:0;
         right:0;
         bottom:0;
         margin:auto;
-        width: 40%; 
+        width: 65%; 
         height: auto;
     }
     #home-header{
-
         padding-top: 40px;
         text-align: center;
+    }
+    #header-aboutbtn{
+        padding-top: 15px;
     }
     #portfolio-span{
         text-align: center;
@@ -416,18 +418,7 @@ i{
     .copyright{
         font-size: 14px;
     }
-    /* #submitBtn-div{
-        text-align: center;
-    }
-   #spinner{
-        text-align: center;
-    }
-    #msg{
-        text-align: center;
-    }  */
     #contact{
         text-align: center;
     }
-    
-   
 }
