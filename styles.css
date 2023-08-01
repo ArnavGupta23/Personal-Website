@@ -360,12 +360,13 @@ i{
         height: auto; 
         border: 4px solid rgb(210, 164, 105);
     } */
+    
     #home{
         height: 95vh !important;
     }
     .side-image{
         position:absolute;
-        top: 350px;
+        top: 325px;
         left:0;
         right:0;
         bottom:0;
