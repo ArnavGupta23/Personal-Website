@@ -116,8 +116,8 @@ function animateSkills(){
     $("#java").animate({
         width: "80%",
     }, 900);
-    $("#communication").animate({
-        width: "70%",
+    $("#protocols").animate({
+        width: "40%",
     }, 900);
     $("#leadership").animate({
         width: "80%",
@@ -139,6 +139,18 @@ function animateSkills(){
     }, 900);
     $("#vscode").animate({
         width: "65%",
+    }, 900);
+    $("#aws").animate({
+        width: "35%",
+    }, 900);
+    $("#azure").animate({
+        width: "45%",
+    }, 900);
+    $("#docker").animate({
+        width: "40%",
+    }, 900);
+    $("#node").animate({
+        width: "43%",
     }, 900);
 }
 function setProgressZero(){
