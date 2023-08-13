@@ -2,7 +2,7 @@
 function SmallScreen(){
     if(window.innerWidth < 700){
         //console.log('Small Screen');
-       $('#header-aboutbtn').addClass('justify-content-center');
+        $('#header-aboutbtn').addClass('justify-content-center');
         startBinaryBackground(false);
     }
     else{
@@ -107,17 +107,17 @@ window.addEventListener('scroll', addScrolledClass);
 function animateSkills(){
     // Set the width to animate the progress bar
     // Along with time duration in milliseconds
-     $("#css").animate({
+    $("#css").animate({
         width: "60%",
     }, 900);
     $("#html").animate({
         width: "60%",
     }, 900);
     $("#java").animate({
-        width: "80%",
+        width: "85%",
     }, 900);
     $("#protocols").animate({
-        width: "40%",
+        width: "30%",
     }, 900);
     $("#leadership").animate({
         width: "80%",
@@ -151,6 +151,15 @@ function animateSkills(){
     }, 900);
     $("#node").animate({
         width: "43%",
+    }, 900);
+    $("#jquery").animate({
+        width: "33%",
+    }, 900);
+    $("#express").animate({
+        width: "23%",
+    }, 900);
+    $("#ejs").animate({
+        width: "27%",
     }, 900);
 }
 function setProgressZero(){
