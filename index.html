@@ -45,7 +45,9 @@
     <!-- https://michalsnik.github.io/aos/ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
+    <!-- Magic Mouse -->
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
     
     <script src="js/controller.js"></script>
 </head>
@@ -53,6 +55,18 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">  
 
+    <script type="text/javascript">
+        options = {
+        "cursorOuter": "circle-basic",
+        "hoverEffect": "circle-move",
+        "hoverItemMove": false,
+        "defaultCursor": false,
+        "outerWidth": 30,
+        "outerHeight": 30
+          };
+        magicMouse(options);
+    </script>
+    
     <div id="header">
         <div class="prevent-select" id="binary-background"></div>
         <nav id="main-nav" class="navbar navbar-expand-md fixed-top custom-col" data-bs-theme="dark">
