@@ -52,7 +52,6 @@
 
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">  
-   
 
     <div id="header">
         <div class="prevent-select" id="binary-background"></div>
@@ -64,7 +63,7 @@
 
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
+                </button>
             </div>
 
             <div>
@@ -159,7 +158,7 @@
                         </ul>
                         <div data-aos="fade-up" data-aos-duration="1000">
                             <!--<span class="fs-3 lead">A</span>
-                             <p id="element" class="fs-3 lead" style="color:#e99133; text-decoration: underline;"></p> -->
+                            <p id="element" class="fs-3 lead" style="color:#e99133; text-decoration: underline;"></p> -->
                             <p id="element" class="fs-3 lead"></p>
                         </div>
                         <h1 class="display-3" data-aos="fade-up" data-aos-duration="1500">Hello, I'm <a id="style-2" data-replace="Arnav Gupta"><span>Arnav Gupta</span></a></h1>
@@ -234,8 +233,8 @@
                     <div id="portfolio-span" data-aos="zoom-out-right" data-aos-duration="1500">
                         <span >To learn more about my activities, click below and download my resume. <br><br></span>
                     </div>
-                   <!-- <a href="/Arnav Gupta Resume Software Developer.pdf" download="Arnav Gupta Resume Software Developer"> <i class="fa-solid fa-download fa-2xl" style="color: #ffffff;"></i></a> -->
-                   <iframe data-aos="fade-up-right" data-aos-duration="1500" rel="nofollow noopener" src="Arnav Gupta Resume Software Developer.pdf" frameborder="0" style="width: 100%; height: 50vh;"></iframe>
+                <!-- <a href="/Arnav Gupta Resume Software Developer.pdf" download="Arnav Gupta Resume Software Developer"> <i class="fa-solid fa-download fa-2xl" style="color: #ffffff;"></i></a> -->
+                <iframe data-aos="fade-up-right" data-aos-duration="1500" rel="nofollow noopener" src="Arnav Gupta Resume Software Developer.pdf" frameborder="0" style="width: 100%; height: 50vh;"></iframe>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -452,22 +451,22 @@
 <script>
     $(document).ready(function() {
       // Listen for changes in the input fields
-      $('input').on('input', function() {
+    $('input').on('input', function() {
         // Check if all fields have values
         var allFieldsFilled = true;
         $('input').each(function() {
-          if ($(this).val() === '') {
-            hideSpinner();
-            allFieldsFilled = false;
-            return false; // Break the loop
-          }
+            if ($(this).val() === '') {
+                hideSpinner();
+                allFieldsFilled = false;
+                return false;
+            }
         });
         // Enable or disable the submit button based on allFieldsFilled
         $('#submitBtn').prop('disabled', !allFieldsFilled);
-      });
     });
+});
 
-  </script>
+</script>
 
 <div class="copyright">
     <p>Copyright © Arnav Gupta. Made by a High School Student</p>
@@ -477,10 +476,10 @@
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxHCkxqf3q4soUO1pZOWXFj--E9Z29NJV9x_Nxc03GR9da5kVzVmBvYJi2S8x6z5cKbhQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
-  
+
     form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             hideSpinner();
             msg.style.color = "#569e49";
@@ -493,24 +492,24 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
+</script>
 
 <!-- Toast  -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="15000">
-    <div class="toast-header">
-      <img src="images/favcon.png" class="rounded me-2" alt="..." style="width:25px">
-      <strong class="me-auto">Chat Bot</strong>
-      <small class="text-body-secondary">just now</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="15000">
+        <div class="toast-header">
+            <img src="images/favcon.png" class="rounded me-2" alt="..." style="width:25px">
+            <strong class="me-auto">Chat Bot</strong>
+            <small class="text-body-secondary">just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
     <div class="toast-body">
-      Any Questions? Email Arnav Gupta.
+        Any Questions? Email Arnav Gupta.
         <div class="mt-2 pt-2 border-top">
             <a class="btn btn-primary btn-sm" href="mailto:arnavkgu@gmail.com" role="button">Click Here to Email</a>
         </div>
     </div>
-  </div>
+</div>
 </div>
 
 <script> AOS.init(); </script>

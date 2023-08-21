@@ -184,10 +184,10 @@ function spinnerChecker(){
     //console.log("inside the function");
     var timer = setTimeout(function() {
         if (myDiv.style.display === 'block') {
-          msg.style.color = "#bf1d17";
-          msg.innerHTML = "Problem has occurred";
+            msg.style.color = "#bf1d17";
+            msg.innerHTML = "Problem has occurred";
           //console.log('more than 5 seconds');
-          hideSpinner();
+            hideSpinner();
         }
-      }, 5000);
+    }, 5000);
 }
