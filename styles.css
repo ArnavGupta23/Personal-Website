@@ -78,6 +78,7 @@ body{
 }
 
 .binary-digit {
+    font-family: 'JetBrains Mono', monospace;
     position: absolute;
     color: white;
     font-size: 13px;
