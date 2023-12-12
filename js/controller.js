@@ -191,3 +191,26 @@ function spinnerChecker(){
         }
     }, 5000);
 }
+
+
+function maintenance(NotShow){
+    if(NotShow){ 
+        $("#main-nav").hide();
+        $("#home-part").hide();
+        $("#section-about").hide();
+        $("#portfolio").hide();
+        $("#contact").hide();
+        $("#side-img").hide();
+        $("#MaintenanceDiv").show();
+
+    }
+    else{
+        $("#main-nav").show();
+        $("#home-part").show();
+        $("#section-about").show();
+        $("#portfolio").show();
+        $("#contact").show();  
+        $("#side-img").show();  
+        $("#MaintenanceDiv").hide();  
+    }
+}

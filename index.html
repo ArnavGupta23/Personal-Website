@@ -152,6 +152,10 @@
   
 <!-- Home Text Section -->
         <section id="home" style="height: 100vh;">
+
+            <div id="MaintenanceDiv" class="col-lg-12 d-flex justify-content-center" >
+                <h1 style="padding-top: 40vh;">Site is Under Maintenance</h1>
+            </div>
             
             <div id="home-part" class="container custom-col" style="margin-left: 10%;">
                 <div id="home-header" class="row">
@@ -192,7 +196,7 @@
                     </div>
                 </div>
             </div>
-                <img data-aos="zoom-in-left" data-aos-duration="900" src="images/arnavmainpic.jpg" alt="img" class = "side-image">
+                <img id="side-img" data-aos="zoom-in-left" data-aos-duration="900" src="images/arnavmainpic.jpg" alt="img" class = "side-image">
         </section>
     </div>
 
@@ -212,7 +216,10 @@
     </script>
 
     <!-- needed to call SmallScreen once created all elements -->
-    <script>SmallScreen();</script>
+    <script>
+    SmallScreen();
+    maintenance(true);
+    </script>
 
 <!-- about section -->
 <section id="section-about">
@@ -536,7 +543,7 @@
 </div>
 </div>
 
-<script> AOS.init(); </script>
+<script> AOS.init(); maintenance(true);</script>
 
 </body>
 </html>
