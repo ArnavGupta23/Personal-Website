@@ -34,31 +34,20 @@ html::-webkit-scrollbar{
     transition: background-color 0.5s ease-in-out;
 }
 
-/* .navbar.navlink.active {
-    color: aqua !important;
-} */
-  
 .scrolled{
   background-color: rgba(23, 23, 23, 0.665) !important;  /*Set your desired background color */
   transition: background-color 0.5s ease-in-out;
 
 }
-  
-/* section{
-    height: 100vh;
-} */
+
 body{
-    background-color: rgb(23, 23, 23) !important;
-    /* overflow-x: hidden; */
-   
+    background-color: rgb(23, 23, 23) !important;   
 }
 #header{
     background-image: url(images/codingbackground.png);
     color: rgb(238, 238, 238);
 }
 #home{
-    /* background-image: url(images/codingbackground.png) !important; 
-    background-color: rgb(23, 23, 23); */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -212,7 +201,7 @@ i{
 }
 
 
-/* About section TESTING */
+/* About section */
 
 
 #about{
@@ -259,7 +248,7 @@ i{
   
   @keyframes wave-animation {
       0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     10% { transform: rotate(20.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
      20% { transform: rotate(-8.0deg) }
      30% { transform: rotate(14.0deg) }
      40% { transform: rotate(-4.0deg) }
