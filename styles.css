@@ -336,6 +336,57 @@ i{
     width: 90%;
 }
 
+
+.blur {
+    filter: blur(10px);
+  }
+  
+.no-blur {
+    filter: blur(0);
+}
+#passwordProtection {
+    /* Center the div */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Ensure it's above the blurred content */
+  
+    /* Style adjustments to match your site */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff; /* White text color */
+    width: 300px; /* Fixed width, adjust as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds some depth */
+  }
+  
+  #passwordProtection label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px; /* Adjust the font size as needed */
+  }
+  
+  #passwordProtection input[type="password"] {
+    width: 100%; /* Full width of the parent div */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between input and button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #passwordProtection button {
+    width: 100%; /* Full width of the parent div */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    cursor: pointer;
+  }
+  
+
 /*_____________Contact Section__________________*/
 
 #contact{
