@@ -386,7 +386,9 @@ i{
     cursor: pointer;
   }
   
-
+.disable-pointer{
+    pointer-events: none
+}
 /*_____________Contact Section__________________*/
 
 #contact{

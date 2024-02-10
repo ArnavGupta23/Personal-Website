@@ -190,31 +190,17 @@
     </div>
 </section>
 
-<!-- Password Protection -->
-<script>
-    function checkPassword() {
-      var passwordEntered = document.getElementById("passwordInput").value;
-      var correctPassword = 'arnav'; // Set your password here
-    
-      if(passwordEntered === correctPassword) {
-        document.getElementById("portfolio-container").classList.remove("blur");
-        document.getElementById("passwordProtection").style.display = "none";
-      } else {
-        alert("Incorrect password, please try again.");
-      }
-    }
-</script>
 <!-- portfolio section -->
 <section id="portfolio" style="padding-top: 5%; position: relative;">
   <!-- Password prompt -->
-  <div id="passwordProtection" data-aos="zoom-in-down" data-aos-duration="1500">
+  <div id="passwordProtection" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-delay="400" >
     <!-- Style this div using the above CSS -->
     <label for="passwordInput">Enter password to view:</label>
     <input type="password" id="passwordInput">
     <button onclick="checkPassword()">Submit</button>
   </div>
 
-    <div class="container blur" id = "portfolio-container">
+    <div class="container blur disable-pointer" id = "portfolio-container">
         <div class="row">
             <div class="col-sm-4">
                 <div class="position-relative">

@@ -175,7 +175,19 @@ function hideSpinner(){
     document.getElementById("spinner").style.display = "none";
 }
 
+function checkPassword() {
+    var passwordEntered = document.getElementById("passwordInput").value;
+    var correctPassword = 'AGupta25'; // Set your password here
+  
+    if(passwordEntered === correctPassword) {
+      document.getElementById("portfolio-container").classList.remove("blur");
+      document.getElementById("portfolio-container").classList.remove("disable-pointer");
 
+      document.getElementById("passwordProtection").style.display = "none";
+    } else {
+      alert("Incorrect password, please try again.");
+    }
+  }
 
 // used for canceling spinner after 5 seconds
 function spinnerChecker(){
