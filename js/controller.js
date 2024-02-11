@@ -182,12 +182,24 @@ function checkPassword() {
     if(passwordEntered === correctPassword) {
       document.getElementById("portfolio-container").classList.remove("blur");
       document.getElementById("portfolio-container").classList.remove("disable-pointer");
-
       document.getElementById("passwordProtection").style.display = "none";
     } else {
       alert("Incorrect password, please try again.");
     }
-  }
+}
+
+function blurPortfolio(blur){
+    if(blur){
+        document.getElementById("portfolio-container").classList.add("blur");
+        document.getElementById("portfolio-container").classList.add("disable-pointer");
+        document.getElementById("passwordProtection").style.display = "block";
+    }
+    else{
+        document.getElementById("portfolio-container").classList.remove("blur");
+        document.getElementById("portfolio-container").classList.remove("disable-pointer");
+        document.getElementById("passwordProtection").style.display = "none";
+    }
+}
 
 // used for canceling spinner after 5 seconds
 function spinnerChecker(){
