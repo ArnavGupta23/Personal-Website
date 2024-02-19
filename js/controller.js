@@ -108,58 +108,76 @@ function animateSkills(){
     // Set the width to animate the progress bar
     // Along with time duration in milliseconds
     $("#css").animate({
-        width: "60%",
+        width: "70%",
     }, 900);
     $("#html").animate({
-        width: "60%",
-    }, 900);
-    $("#java").animate({
-        width: "85%",
-    }, 900);
-    $("#protocols").animate({
-        width: "30%",
-    }, 900);
-    $("#leadership").animate({
         width: "80%",
     }, 900);
+    $("#java").animate({
+        width: "90%",
+    }, 900);
+    $("#protocols").animate({
+        width: "40%",
+    }, 900);
+    $("#leadership").animate({
+        width: "90%",
+    }, 900);
     $("#sql").animate({
-        width: "55%",
+        width: "65%",
     }, 900);
     $("#git").animate({
         width: "85%",
     }, 900);
     $("#js").animate({
-        width: "55%",
+        width: "65%",
     }, 900);
     $("#cpp").animate({
         width: "75%",
     }, 900);
     $("#googleapi").animate({
-        width: "35%",
+        width: "50%",
     }, 900);
     $("#vscode").animate({
-        width: "65%",
+        width: "75%",
     }, 900);
     $("#aws").animate({
-        width: "35%",
-    }, 900);
-    $("#azure").animate({
-        width: "45%",
-    }, 900);
-    $("#docker").animate({
         width: "40%",
     }, 900);
+    $("#azure").animate({
+        width: "55%",
+    }, 900);
+    $("#docker").animate({
+        width: "45%",
+    }, 900);
     $("#node").animate({
-        width: "43%",
+        width: "63%",
     }, 900);
     $("#jquery").animate({
-        width: "33%",
+        width: "54%",
     }, 900);
     $("#express").animate({
-        width: "23%",
+        width: "53%",
     }, 900);
     $("#ejs").animate({
-        width: "27%",
+        width: "47%",
+    }, 900);
+    $("#react").animate({
+        width: "77%",
+    }, 900);
+    $("#bootstrap").animate({
+        width: "75%",
+    }, 900);
+    $("#websockets").animate({
+        width: "69%",
+    }, 900);
+    $("#openAI").animate({
+        width: "67%",
+    }, 900);
+    $("#python").animate({
+        width: "77%",
+    }, 900);
+    $("#angular").animate({
+        width: "67%",
     }, 900);
 }
 function setProgressZero(){
