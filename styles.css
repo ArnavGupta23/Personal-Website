@@ -227,12 +227,14 @@ i{
 .sub-title{
     font-size: 50px;
     font-weight: 600;
-    color:#fff;
+    /* color:#fff; */
+    color: #54b3d6;
 }
 .about-col-2 p{
     padding-top: 5%;
     font-size: 20px;
-    color: rgb(152, 149, 149);
+    /* color: rgb(152, 149, 149); */
+    color: #e0e0e0
 }
 
 
