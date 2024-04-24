@@ -437,16 +437,16 @@
             <div class="col-sm-7">
                 <form class="needs-validation " name="submit-to-google-sheet" autocomplete="on">
                     <div class="form-floating mb-3" data-aos="zoom-in-left">
-                        <input type="name" class="form-control" id="floatingName" placeholder="John Doe" name="Name" required>
-                        <label for="floatingName">Full Name</label>
+                        <input type="name" class="form-control" id="contactName" placeholder="John Doe" name="Name" required>
+                        <label for="floatigName">Full Name</label>
                     </div>
                     <div class="form-floating mb-3" data-aos="zoom-in-left">
-                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com" name="Email" required>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" name="Email" required>
                         <label for="floatingEmail">Email address</label>
                     </div>
                     <div class="form-floating mb-3" data-aos="zoom-in-left">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="Message" required></textarea>
-                        <label for="floatingTextarea2">Comments</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="contactTextarea" style="height: 100px" name="Message" required></textarea>
+                        <label for="contactTextarea">Comments</label>
                     </div>
                     <div data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
                         <button id="submitBtn" type="submit" class="btn btn-primary" onclick="showSpinner()" disabled>Submit</button>
@@ -461,12 +461,12 @@
     </div>
 
 <script>
-    $(document).ready(function() {
-      // Listen for changes in the input fields
-    $('input').on('input', function() {
+  $(document).ready(function() {
+    //wait for changes in input
+    $('#contactName, #contactEmail, #contactTextarea').on('input', function() {
         // Check if all fields have values
         var allFieldsFilled = true;
-        $('input').each(function() {
+        $('#contactName, #contactEmail, #contactTextarea').each(function() {
             if ($(this).val() === '') {
                 hideSpinner();
                 allFieldsFilled = false;
