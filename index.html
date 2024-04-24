@@ -413,8 +413,8 @@
                         <label for="floatingEmail">Email address</label>
                     </div>
                     <div class="form-floating mb-3" data-aos="zoom-in-left">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="Message" required></textarea>
-                        <label for="floatingTextarea2">Comments</label>
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" name="Message" required></textarea>
+                        <label for="floatingTextarea">Comments</label>
                     </div>
                     <div data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
                         <button id="submitBtn" type="submit" class="btn btn-primary" onclick="showSpinner()" disabled>Submit</button>
@@ -431,10 +431,10 @@
 <script>
   $(document).ready(function() {
     // Listen for changes in the input fields with IDs "floatingName" and "floatingEmail"
-    $('#floatingName, #floatingEmail').on('input', function() {
+    $('#floatingName, #floatingEmail, #floatingTextarea').on('input', function() {
         // Check if all fields have values
         var allFieldsFilled = true;
-        $('#floatingName, #floatingEmail').each(function() {
+        $('#floatingName, #floatingEmail, #floatingTextarea').each(function() {
             if ($(this).val() === '') {
                 hideSpinner();
                 allFieldsFilled = false;
