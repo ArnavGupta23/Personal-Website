@@ -83,7 +83,7 @@ function launchToast() {
     toast.show();
 }
 // Set a timeout of 1 minute (60000 milliseconds) to launch the toast
-setTimeout(launchToast, 45000);
+setTimeout(launchToast, 15000);
 
 
 // Function to add the "scrolled" class to the navbar when scrolling down
